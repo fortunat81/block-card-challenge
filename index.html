@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Blog preview card</title>
+  <style>
+    @font-face {
+        font-family: "figtree";
+        src: url("assets/fonts/Figtree-VariableFont_wght.ttf");
+    }
+    body{
+        background-color: hsl(47, 88%, 63%);
+        font-family: 'figtree';
+    }
+    .main-content{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .blog-card{
+        box-sizing: border-box;
+        background-color: white;
+        max-width: 380px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 5%;
+        box-shadow: 5px 5px black;
+        font-size: clamp(0.8rem, -0.333rem + 5.333vw, 1rem);
+    }
+    .card-header{
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+    }
+    .card-img{
+        max-width: 100%;
+        border-radius: 5%;
+    }
+    .card-btn{
+        font-weight: bold;
+        width: fit-content;
+        border: none;
+        border-radius: 10%;
+        padding: 5px 10px;
+        background-color: hsl(47, 88%, 63%);
+    }
+    .card-body{
+        margin-top:15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card-body-h{
+        cursor: pointer;
+        display: block;
+        font-weight: bold;
+        font-size: clamp(1.12rem, -0.467rem + 7.467vw, 1.4rem);
+    }
+    .card-body-h:hover{
+        color:hsl(47, 88%, 63%) ;
+    }
+    .card-body-text{
+        color: hsl(0, 0%, 42%);
+    }
+    .card-footer{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .card-footer-text{
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="blog-card">
+
+            <div class="card-header">
+                <div class="img-container">
+                    <img class="card-img" src="assets/images/illustration-article.svg" alt="header image of the blog card"> 
+                </div>
+                <button type="button" class="card-btn">Learning</button>
+                <span class="pub-date">Published 21 Dec 2023</span>
+            </div>
+            <div class="card-body">
+               <span class="card-body-h">HTML & CSS foundations</span>
+               <span class="card-body-text">These languages are the backbone of every website, defining structure, content, and presentation.
+            </span>
+            </div>
+            <div class="card-footer">
+                <div class="avatar-container">
+                    <img src="assets/images/image-avatar.webp" alt="circular profile image">
+                </div>
+                <span class="card-footer-text">Greg Hooper</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
